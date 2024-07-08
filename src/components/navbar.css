@@ -1,0 +1,25 @@
+.navbar--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: rgb(199, 199, 247);
+}
+
+.navbar--title {
+  font-size: 30px;
+  height: 100%;
+}
+
+.navbar {
+  height: 100vh;
+}
+
+li {
+  list-style-type: none;
+}
+
+.items--container {
+  background-color: aqua;
+  height: 100%;
+}

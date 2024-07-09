@@ -1,21 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./navbar.css";
 
 const Navbar = () => {
   const [colorScheme, setColorScheme] = useState("light");
 
   const changeColorScheme = () => {
-    colorScheme === "light" ? setColorScheme("dark") : setColorScheme("light");
+    setColorScheme(colorScheme === "light" ? "dark" : "light");
   };
 
+  useEffect(() => {
+    document.body.className = colorScheme;
+  }, [colorScheme]);
+
   return (
-    <div className="navbar">
+    <div className={`navbar ${colorScheme}`}>
       <nav className="navbar--container">
-        <span className="navbar--title">MDViwer</span>
-        <label class="switch" onChange={changeColorScheme}>
-          <input type="checkbox" />
-          <span class="slider round"></span>
-        </label>{" "}
+        <span className="navbar--title">MDViewer</span>
+        <label className="switch">
+          <input type="checkbox" onChange={changeColorScheme} />
+          <span className="slider round"></span>
+        </label>
       </nav>
       <div className="items--container">
         <ul>

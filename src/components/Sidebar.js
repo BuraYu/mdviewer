@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "./navbar.css";
+import "./sidebar.css";
 
-const Navbar = () => {
+const Siderbar = () => {
   const [colorScheme, setColorScheme] = useState("light");
 
   const changeColorScheme = () => {
@@ -41,4 +41,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Siderbar;
